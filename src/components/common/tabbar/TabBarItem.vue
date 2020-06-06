@@ -3,7 +3,6 @@
   <div class="tab-bar-item" @click="itemClick">
     <div v-if="!isActive"><slot name="item-icon"></slot></div>
     <div v-else><slot name="item-icon-active"></slot></div>
-    //因为App中的代码会替换掉这里的属性所以又嵌套了一层div
     <div :style="activeStyle"><slot name="item-text"></slot></div>
   </div>
 </template>
